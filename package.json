@@ -1,0 +1,10 @@
+{
+  "name": "english-c1-textbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Интерактивный учебник грамматики английского для уровня C1",
+  "scripts": {
+    "serve": "python3 -m http.server 8010",
+    "test": "node test/validate.js"
+  }
+}

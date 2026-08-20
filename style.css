@@ -253,6 +253,11 @@ svg { display: block; flex-shrink: 0; }
 .main {
   padding: var(--space-6) var(--space-5);
   max-width: var(--measure);
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .main { max-width: 56rem; }
 }
 
 .chapter-module-label {

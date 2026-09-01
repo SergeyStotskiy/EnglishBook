@@ -322,6 +322,14 @@ window.GRAMMAR_CHAPTERS.push(
     module: 'Модуль 7. Reported Speech',
     id: 'reported-speech',
     title: '7.1 Reported Speech — косвенная речь',
+    focus: 'high',
+    focusNote: 'Правило 48 — backshift времени, самое слабое место на сейчас: 6 из 6 промахов в последней проверке (сессия 43).',
+    mistakes: [
+      { wrong: '~~He said that he isn\'t hungry.~~', right: 'He said (that) he wasn\'t hungry.', why: 'Present Simple при backshift уходит в Past Simple — is не остаётся is.' },
+      { wrong: '~~She asked me why I was late.~~', right: 'She asked me why I had been late.', why: 'Past Simple в прямой речи при backshift сам сдвигается ещё на шаг — в Past Perfect, а не остаётся Past Simple.' },
+      { wrong: '~~They said that they will finish a report tomorrow.~~', right: 'They said (that) they would finish the report tomorrow.', why: 'will → would — рецидивная ошибка, встречается уже во второй раз подряд.' },
+      { wrong: '~~He said me that he can\'t come to meeting.~~', right: 'He told me (that) he couldn\'t come to the meeting.', why: 'say не берёт объект без to (нужно told me или said to me); can\'t → couldn\'t; the meeting — конкретная встреча, нужен артикль.' },
+    ],
     intro: `
       <p>Ты уже сталкивался с этим механизмом на практике — просто без формального названия. В
       обычном рассказе о прошлом ("вчера мне позвонили и сказали, что завтра будет встреча")
@@ -420,6 +428,11 @@ window.GRAMMAR_CHAPTERS.push(
     module: 'Модуль 7. Reported Speech',
     id: 'reported-speech-questions-commands',
     title: '7.2 Reported Questions & Commands',
+    focus: 'medium',
+    focusNote: 'Правило 48 — да/нет-вопрос в косвенной речи (if/whether) пришлось разбирать отдельно, самостоятельно не построился (сессия 43).',
+    mistakes: [
+      { wrong: '~~Teacher asked children (did they do their homework)~~', right: 'The teacher asked the children if/whether they had done their homework.', why: 'да/нет-вопрос в косвенной речи требует if/whether вместо that, плюс backshift did → had done.' },
+    ],
     intro: `
       <h4>Reported yes/no questions — через if/whether, без инверсии</h4>
       <p>Прямой вопрос строится с инверсией (вспомогательный перед подлежащим). В reported speech

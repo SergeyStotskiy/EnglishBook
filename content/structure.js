@@ -5,7 +5,7 @@ window.GRAMMAR_CHAPTERS.push(
     id: 'structure-be-vs-do',
     title: '4.1 to be vs do-support — два семейства глаголов',
     focus: 'high',
-    focusNote: 'Правило 2 в rules.md — статус 🟡 больше 20 сессий подряд, самая долгоиграющая ошибка проекта. Всплывает в новой синтаксической позиции каждый раз, когда кажется закрытой.',
+    focusNote: 'Правило 2 в rules.md — статус 🟡 больше 20 сессий подряд, самая долгоиграющая ошибка проекта. Всплывает в новой синтаксической позиции каждый раз, когда кажется закрытой. Правило 19 (hurt) — частный, но острый случай той же путаницы, статус 🔴.',
     intro: `
       <p>Главная идея: в английском не "прилепи not куда-нибудь", а два разных механизма в
       зависимости от того, какой глагол в предложении.</p>
@@ -70,6 +70,13 @@ window.GRAMMAR_CHAPTERS.push(
         <li><strong>Задвоение операторов в вопросах.</strong> Отдельный сбой: при инверсии в
         голове одновременно всплывают оба способа, и оба остаются в предложении —
         <s>Why are your hands is dirty?</s> вместо "Why are your hands dirty?"</li>
+        <li><strong>Ловушка-исключение: глагол, у которого V3 выглядит как базовая форма.</strong>
+        <code>hurt</code> не меняется по формам вообще (hurt-hurt-hurt). Из-за этого
+        <s>my back was hurt</s> формально проходит тест из таблицы выше (после was стоит
+        V3-подобное слово) — но меняет смысл на пассив, «был ранен/повреждён», а не «болел». Для
+        значения «болеть» hurt работает САМ, как обычный глагол Семьи 2, вообще без be:
+        <strong>my back hurt</strong> / <strong>my back was hurting</strong> (Continuous, если
+        процесс).</li>
       </ol>
     `,
     mistakes: [
@@ -79,6 +86,7 @@ window.GRAMMAR_CHAPTERS.push(
       { wrong: '~~Why are your hands is dirty?~~', right: 'Why are your hands dirty?', why: 'Задвоение — оставлены оба кандидата на роль оператора вместо одного.' },
       { wrong: '~~Why is he doesn\'t answer calls?~~', right: "Why doesn't he answer calls?", why: 'То же задвоение: правильный кандидат — do (answer — Семья 2), is лишний.' },
       { wrong: '~~He doesn\'t make dinner now~~', right: "He isn't cooking dinner now", why: 'do выбран правильно для СВОЕЙ категории, но категория выбрана не та: "now" требует Continuous, а не Simple.' },
+      { wrong: '~~my back was hurt~~', right: 'my back hurt / my back was hurting', why: 'hurt — обычный глагол ("болеть"), а не прилагательное; was hurt меняет смысл на пассив ("был ранен").' },
     ],
     quiz: [
       {
@@ -121,6 +129,13 @@ window.GRAMMAR_CHAPTERS.push(
         prompt: 'Переведи: «Он ещё не закончил отчёт» (has или have — выбери верную форму).',
         answers: ["He hasn't finished the report yet", 'He has not finished the report yet'],
         explanation: 'finished — Perfect, Семья 1 (has), do-support здесь не нужен и невозможен.',
+      },
+      {
+        type: 'mcq',
+        prompt: 'My back ___ all day because I sat too long. (значение «болела»)',
+        options: ['was hurt', 'hurt', 'were hurt', 'is hurt'],
+        correctIndex: 1,
+        explanation: 'hurt-hurt-hurt не меняет форму; в значении «болеть» это обычный глагол без be. "was hurt" означало бы "была повреждена/её ранили" — не то значение.',
       },
     ],
   },
@@ -276,7 +291,7 @@ window.GRAMMAR_CHAPTERS.push(
     id: 'structure-c1-nuances',
     title: '4.4 Связка was/is, неправильные глаголы и без лишнего it\'s',
     focus: 'high',
-    focusNote: 'Правила 37, 39 и 8 в rules.md — три свежих наблюдения (08-2026), ещё не закреплены.',
+    focusNote: 'Правила 37, 39 и 8 в rules.md — три свежих наблюдения (08-2026), ещё не закреплены. Правило 8: come-came-come путается в обе стороны (09-2026) — приоритет для точечного дрилла.',
     intro: `
       <h4>«Это был/была» → связка was, не is</h4>
       <p>Русская конструкция «это был/была X» по звучанию похожа на настоящее время («это X»), и
@@ -319,13 +334,23 @@ window.GRAMMAR_CHAPTERS.push(
           <tr><td>teach</td><td><strong>taught</strong></td></tr>
           <tr><td>buy</td><td><strong>bought</strong> (не <s>buyed</s>)</td></tr>
           <tr><td>hear</td><td><strong>heard</strong> (не <s>heared</s>)</td></tr>
+          <tr><td>come</td><td><strong>came</strong> в Past Simple; но после had/have — база <strong>come</strong>, не came</td></tr>
         </tbody>
       </table>
+      <div class="callout warn"><strong>come — трёхформенный глагол-ловушка (come—came—come):</strong>
+      базовая форма и V3 выглядят одинаково, отличается только Past Simple. Путаница идёт в обе
+      стороны: то came просачивается туда, где после had нужна база (<s>had already came</s>
+      вместо <strong>had already come</strong>), то наоборот — голая come остаётся там, где нужен
+      обычный Past Simple (<s>I finally come to the room</s> вместо <strong>I finally
+      came</strong>). Проверка та же, что для любого неправильного глагола: сначала определи
+      время, потом посмотри форму в списке — не полагайся на то, что «выглядит знакомо».</div>
     `,
     mistakes: [
       { wrong: '~~This is my very first meeting with this client~~', right: 'This was my very first meeting with this client', why: 'Русский оригинал в прошедшем ("была") — связка должна согласоваться, was, не is.' },
       { wrong: '~~The one problem it\'s a price~~', right: 'The only problem is the price', why: 'Лишнее it\'s дублирует уже названное подлежащее (the only problem).' },
       { wrong: '~~heared~~', right: 'heard', why: 'hear — неправильный глагол, не образуется по шаблону -ed.' },
+      { wrong: '~~had already came~~', right: 'had already come', why: 'После had нужна база V3 (come), а не форма Past Simple (came).' },
+      { wrong: '~~I finally come to the meeting room~~', right: 'I finally came to the meeting room', why: 'Обычный Past Simple без had — нужна форма came, базовая come тут не годится.' },
     ],
     quiz: [
       {
@@ -354,6 +379,20 @@ window.GRAMMAR_CHAPTERS.push(
         prompt: 'Переведи: «Это был не первый такой случай» (используй wasn\'t).',
         answers: ["It wasn't the first time like this", "It wasn't the first such case", "This wasn't the first time like this"],
         explanation: 'Прошедшее «был» → wasn\'t, не isn\'t.',
+      },
+      {
+        type: 'mcq',
+        prompt: 'By the time I arrived, the meeting ___.',
+        options: ['already come', 'had already come', 'had already came', 'has already came'],
+        correctIndex: 1,
+        explanation: 'Past Perfect нужен (раньше другого прошлого события), а после had — база come, не came.',
+      },
+      {
+        type: 'mcq',
+        prompt: 'She finally ___ into the room ten minutes late.',
+        options: ['come', 'came', 'had come', 'comes'],
+        correctIndex: 1,
+        explanation: 'Обычный Past Simple, одно событие с явным маркером (ten minutes late) — came, не базовая come.',
       },
     ],
   }

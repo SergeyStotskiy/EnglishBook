@@ -143,6 +143,7 @@ window.GRAMMAR_CHAPTERS.push(
       { wrong: '~~preparing to a presentation~~', right: 'preparing for the presentation', why: 'prepare требует for, не to.' },
       { wrong: '~~agreed the price~~', right: 'agreed on the price', why: 'agree в значении "договориться о чём-то" требует on.' },
       { wrong: '~~explained all him~~', right: 'explained everything to him', why: 'explain никогда не работает без to перед адресатом.' },
+      { wrong: '~~searching my keys~~', right: 'searching for my keys', why: 'search требует обязательный предлог for — без него это буквально "обыскать (вещь)", а не "искать что-то".' },
     ],
     quiz: [
       {
@@ -185,6 +186,13 @@ window.GRAMMAR_CHAPTERS.push(
         prompt: 'Переведи: «Мы обсудили новый проект с коллегой» (без лишнего предлога у discuss).',
         answers: ['We discussed the new project with a colleague', 'We discussed a new project with a colleague'],
         explanation: 'discuss — переходный, объект сразу после глагола, без about.',
+      },
+      {
+        type: 'mcq',
+        prompt: 'I was searching ___ my keys in my bag.',
+        options: ['—', 'for', 'of', 'to'],
+        correctIndex: 1,
+        explanation: 'search требует обязательный предлог for; без него search my keys значило бы "обыскать мои ключи", что бессмысленно.',
       },
     ],
   },

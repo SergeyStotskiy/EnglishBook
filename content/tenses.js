@@ -353,11 +353,23 @@ window.GRAMMAR_CHAPTERS.push(
         что «выяснилось» — по определению случилось раньше момента выяснения → рассказ прыгнул
         назад, had.</li>
       </ul>
+
+      <div class="callout warn"><strong>Когда лишний и пропущенный had встречаются в одном
+      предложении.</strong> Оба симптома правила 16/32 — это одна и та же путаница, и иногда она
+      видна в одной фразе сразу:
+      <br>❌ <s>When I had arrived, it turned out that I forgot my phone at home.</s>
+      <br>✅ When I <strong>arrived</strong>, it turned out that I <strong>had forgotten</strong>
+      my phone at home.
+      <br>«Приехал» — просто точка отсчёта рассказа (Past Simple). «Забыл» — случилось раньше
+      этой точки, поэтому нужен had. Если тянет поставить had на оба глагола или ни на один —
+      значит, выбор идёт не по хронологии, а наугад. Рабочий приём: сначала выписать оба факта в
+      Past Simple, потом отдельно спросить про каждый — «а это раньше уже названной точки?».</div>
     `,
     mistakes: [
       { wrong: '~~a new employee had come to me and asked~~', right: 'a new employee came up to me and asked', why: 'Простая последовательность событий (пришёл → спросил) → Past Simple, а не Past Perfect.' },
       { wrong: '~~When I got back he has already left~~', right: 'When I got back, he had already left', why: 'Два события в прошлом, важен порядок (ушёл раньше, чем я вернулся) → Past Perfect, не Present Perfect.' },
       { wrong: '~~Last year I switch to another team~~', right: 'Last year I switched to another team', why: 'Правильный глагол, время выбрано верно, но потеряно окончание -ed.' },
+      { wrong: '~~When I had arrived, it turned out that I forgot my phone at home~~', right: 'When I arrived, it turned out that I had forgotten my phone at home', why: 'Perfect стоит не на том глаголе: "arrived" — просто точка отсчёта (Past Simple), "forgot" — случилось раньше неё, нужен had forgotten.' },
     ],
     quiz: [
       {
@@ -393,6 +405,13 @@ window.GRAMMAR_CHAPTERS.push(
         prompt: 'Переведи: «Поезд уже уехал, когда мы добрались до вокзала».',
         answers: ['The train had already left when we got to the station', 'The train had already left when we arrived at the station'],
         explanation: 'Два прошлых события, важен порядок — отъезд поезда раньше → Past Perfect.',
+      },
+      {
+        type: 'mcq',
+        prompt: 'When I ___, it turned out that I ___ my phone at home.',
+        options: ['had arrived / forgot', 'arrived / had forgotten', 'arrived / forgot', 'had arrived / had forgotten'],
+        correctIndex: 1,
+        explanation: '«Приехал» — точка отсчёта (Past Simple). «Забыл» — раньше этой точки (had forgotten). Perfect только на более раннем из двух действий.',
       },
     ],
   },
